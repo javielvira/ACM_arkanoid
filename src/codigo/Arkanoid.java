@@ -13,15 +13,14 @@ import java.awt.event.MouseEvent;
 import acm.graphics.*;
 public class Arkanoid extends acm.program.GraphicsProgram{
 
-	Pelota pelota1 = new Pelota(10, Color.YELLOW);
+	Pelota pelota1 = new Pelota(5, Color.YELLOW);
 	Barra barra1 = new Barra(390, 5, Color.RED);
 	int anchoLadrillo = 25;
 	int altoLadrillo = 15;
 	int numeroLadrillos=14;
 	int espacioMenu = 200;
-
-	int puntuacion = 0;
-	Marcador marcador = new Marcador(40, 25);
+	
+	Marcador marcador = new Marcador(50, 35);
 
 	public void init(){
 		addMouseListeners();
@@ -44,7 +43,7 @@ public class Arkanoid extends acm.program.GraphicsProgram{
 			pause(1);
 		}
 	}
-//iuhggthiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyuiyu
+
 	public void mouseMoved (MouseEvent evento){
 		barra1.mueveBarra(evento.getX(), getWidth());
 	}
@@ -56,7 +55,7 @@ public class Arkanoid extends acm.program.GraphicsProgram{
 						altoLadrillo*j + altoLadrillo,
 						anchoLadrillo, altoLadrillo, Color.green);
 				add(miLadrillo);
-				pause(7);
+				pause(5);
 			}
 		}
 	}
